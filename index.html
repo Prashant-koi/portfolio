@@ -9,25 +9,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Times New Roman", Times, serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
-            line-height: 1.6;
-            color: #000;
-            background: #fff;
-            max-width: 800px;
+            line-height: 1.4;
+            color: #333;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 15px;
         }
-
-        header {
-            text-align: center;
-            padding: 40px 0;
-            border-bottom: 1px solid #000;
-            margin-bottom: 40px;
-        }
-
         .contact-info {
             text-align: center;
             margin: 20px 0;
@@ -47,56 +38,116 @@
             color: #800080;
         }
 
+        .contact-info a[href*="github"] {
+            color: #0000FF;
+        }
+
+        .contact-info a[href*="github"]:visited {
+            color: #800080;
+        }
+
         .contact-info a:hover {
             text-decoration: underline;
         }
+        header {
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 0.9em;
+        }
 
         section {
-            margin: 40px 0;
+            margin: 20px 0;
         }
 
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            border-bottom: 1px solid #000;
+        h1 { font-size: 3em; }
+        h2 { 
+            font-size: 1.3em; 
+            margin-bottom: 12px;
             padding-bottom: 5px;
-            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        h3 { font-size: 1.1em; margin-bottom: 5px; }
+
+        .project-item {
+            margin-bottom: 15px;
         }
 
-        .project {
-            margin-bottom: 30px;
-        }
-
-        .project h3 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
+        .project-item p {
+            margin-bottom: 8px;
+            font-size: 0.95em;
         }
 
         .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            list-style: none;
+            gap: 6px;
+            margin: 5px 0 10px 0;
         }
 
-        .skills-list li {
-            font-style: italic;
+        .skill-tag {
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
         }
 
-        .honor {
-            margin-bottom: 20px;
+        .honors {
+            margin: 10px 0;
         }
 
-        .education {
-            margin-top: 40px;
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        #github-projects {
+            margin-top: 20px;
+        }
+
+        .github-repo {
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+
+        .github-repo h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .github-stats {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .repo-link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .repo-link:hover {
+            text-decoration: underline;
         }
 
         p {
-            margin-bottom: 10px;
+            font-size: 0.95em;
         }
     </style>
 </head>
@@ -104,51 +155,112 @@
     <header>
         <h1>Prasant Koirala</h1>
         <div class="contact-info">
-            <span>(601) 658 1969</span>
             <a href="mailto:koiralaprashanta10@gmail.com">koiralaprashanta10@gmail.com</a>
             <a href="https://www.linkedin.com/in/prasant-koirala-6686082ab/">LinkedIn</a>
+            <a href="https://github.com/Prashant-koi">GitHub</a>
+            <a href="tel:6016581969">(601) 658-1969</a>
         </div>
     </header>
 
-    <section>
+    <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
+        <div class="project-item">
             <h3>Prep AI</h3>
-            <p>A Study helper website targeted toward students to help them prepare well for exams and manage their schedules. Prep AI has three main features along with many more supplementary features. The three main features of Prep AI are schedule building, flash card generator, and quiz generation based on the specific topic the student has provided.</p>
-            <p><em>Technologies: React.js with Tailwind, Spring Boot, Node.js</em></p>
+            <p>Study helper website for exam preparation and schedule management. Features: schedule building, flash card generator, and quiz generation.</p>
+            <div class="skills-list">
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Tailwind</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">Node.js</span>
+            </div>
         </div>
 
-        <div class="project">
+        <div class="project-item">
             <h3>Blog Website</h3>
-            <p>Made a full stack blog website with login and logout functionality, a home page, and creating and editing post functionality. MongoDB was used for the database.</p>
-            <p><em>Stack: MERN</em></p>
+            <p>Full stack blog with authentication and CRUD operations for posts. Built with MERN stack.</p>
+            <div class="skills-list">
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+            </div>
         </div>
     </section>
 
-    <section>
+    <section id="github-projects">
+        <h2>Latest GitHub Projects</h2>
+        <div id="github-repos-container">
+            <!-- GitHub repos will be loaded here -->
+        </div>
+    </section>
+
+    <section id="skills">
         <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Programming</li>
-            <li>Team Cooperation</li>
-            <li>Time Management</li>
-            <li>Communication</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Honors</h2>
-        <div class="honor">
-            <h3>First Runner-up at the Voxo Hatchathon USM (2024)</h3>
-            <p>Developed a Study Helper website in the Voxo Hatchathon 2024, on the theme "Reclaiming Time With Generative AI", with a team of five people. Successfully got the first runner-up prize for the hackathon with our team.</p>
-            <p><em>Technologies: React.js with Tailwind, Spring Boot, Node.js</em></p>
+        <div class="skills-list">
+            <span class="skill-tag">Programming</span>
+            <span class="skill-tag">Team Cooperation</span>
+            <span class="skill-tag">Time Management</span>
+            <span class="skill-tag">Communication</span>
         </div>
     </section>
 
-    <section class="education">
-        <h2>Education</h2>
-        <h3>University Of Southern Mississippi</h3>
-        <p>Undergraduate in Computer Science</p>
-        
+    <section id="honors">
+        <h2>Honors</h2>
+        <h3>First Runner-up at Voxo Hatchathon USM (2024)</h3>
+        <p>Led team development of a Study Helper website themed "Reclaiming Time With Generative AI".</p>
     </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <h3>University of Southern Mississippi</h3>
+        <p>Bachelor's in Computer Science</p>
+    </section>
+
+
+
+    <footer>
+        <p>© 2024 Prasant Koirala</p>
+    </footer>
+
+    <script>
+        async function fetchGitHubProjects() {
+            try {
+                const response = await fetch('https://api.github.com/users/Prashant-koi/repos?sort=created&direction=desc&per_page=2');
+                const repos = await response.json();
+                
+                const container = document.getElementById('github-repos-container');
+                
+                repos.forEach(repo => {
+                    const repoElement = document.createElement('div');
+                    repoElement.className = 'github-repo';
+                    
+                    const description = repo.description || 'No description available';
+                    const language = repo.language || 'Not specified';
+                    
+                    repoElement.innerHTML = `
+                        <h3>
+                            <a href="${repo.html_url}" class="repo-link" target="_blank">${repo.name}</a>
+                            <span class="github-stats">
+                                ⭐ ${repo.stargazers_count} 
+                                🔀 ${repo.forks_count}
+                            </span>
+                        </h3>
+                        <p>${description}</p>
+                        <div class="skills-list">
+                            <span class="skill-tag">${language}</span>
+                        </div>
+                    `;
+                    
+                    container.appendChild(repoElement);
+                });
+            } catch (error) {
+                console.error('Error fetching GitHub repos:', error);
+                document.getElementById('github-repos-container').innerHTML = 
+                    '<p>Unable to load GitHub projects. Please check back later.</p>';
+            }
+        }
+
+        window.addEventListener('load', fetchGitHubProjects);
+    </script>
 </body>
 </html>
