@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasant Koirala - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #000;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contact-info a[href*="linkedin"] {
+            color: #0000FF;
+        }
+
+        .contact-info a[href*="linkedin"]:visited {
+            color: #800080;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            margin-bottom: 30px;
+        }
+
+        .project h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            font-style: italic;
+        }
+
+        .honor {
+            margin-bottom: 20px;
+        }
+
+        .education {
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prasant Koirala</h1>
+        <div class="contact-info">
+            <span>(601) 658 1969</span>
+            <a href="mailto:koiralaprashanta10@gmail.com">koiralaprashanta10@gmail.com</a>
+            <a href="https://www.linkedin.com/in/prasant-koirala-6686082ab/">LinkedIn</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Prep AI</h3>
+            <p>A Study helper website targeted toward students to help them prepare well for exams and manage their schedules. Prep AI has three main features along with many more supplementary features. The three main features of Prep AI are schedule building, flash card generator, and quiz generation based on the specific topic the student has provided.</p>
+            <p><em>Technologies: React.js with Tailwind, Spring Boot, Node.js</em></p>
+        </div>
+
+        <div class="project">
+            <h3>Blog Website</h3>
+            <p>Made a full stack blog website with login and logout functionality, a home page, and creating and editing post functionality. MongoDB was used for the database.</p>
+            <p><em>Stack: MERN</em></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>Programming</li>
+            <li>Team Cooperation</li>
+            <li>Time Management</li>
+            <li>Communication</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Honors</h2>
+        <div class="honor">
+            <h3>First Runner-up at the Voxo Hatchathon USM (2024)</h3>
+            <p>Developed a Study Helper website in the Voxo Hatchathon 2024, on the theme "Reclaiming Time With Generative AI", with a team of five people. Successfully got the first runner-up prize for the hackathon with our team.</p>
+            <p><em>Technologies: React.js with Tailwind, Spring Boot, Node.js</em></p>
+        </div>
+    </section>
+
+    <section class="education">
+        <h2>Education</h2>
+        <h3>University Of Southern Mississippi</h3>
+        <p>Undergraduate in Computer Science</p>
+        
+    </section>
+</body>
+</html>
