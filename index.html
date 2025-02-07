@@ -225,8 +225,12 @@
     <script>
         async function fetchGitHubProjects() {
             try {
-                const response = await fetch('https://api.github.com/users/Prashant-koi/repos?sort=created&direction=desc&per_page=2');
+                const response = await fetch('https://api.github.com/users/Prashant-koi/repos?sort=created&direction=desc&per_page=6');
                 const repos = await response.json();
+
+                const filteredRepos = repos
+                    .filter(repo => repo.name.toLowerCase() !== 'portfolio')
+                    .slice(0, 2);
                 
                 const container = document.getElementById('github-repos-container');
                 
