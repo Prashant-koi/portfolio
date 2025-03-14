@@ -21,7 +21,23 @@
             max-width: 700px;
             margin: 0 auto;
             padding: 15px;
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.95); /* semi-transparent background */
         }
+        
+        /* Particle background styles */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: white; /* Dark tech blue background */
+        }
+        
+        /* Rest of your existing styles */
         .contact-info {
             text-align: center;
             margin: 20px 0;
@@ -159,6 +175,10 @@
     </style>
 </head>
 <body>
+    <!-- Particles container -->
+    <div id="particles-js"></div>
+    
+    <!-- Your existing content starts here -->
     <header>
         <h1>Prasant Koirala</h1>
         <div class="contact-info">
@@ -172,6 +192,28 @@
     <section id="projects">
         <h2>🧑‍💻 Projects</h2>
         <div class="project-item">
+            <h3>Song Review App</h3>
+            <p>An App for song lovers where you can review songs and see the ranking of songs according to their genre, along with a top ranking.</p>
+            <div class="skills-list">
+                <span class="skill-tag">MySql</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <h3>Chell- A Shell Made In C</h3>
+            <p>An Unix like Shell Made using C programming langauge compatable with both Linux and Windows.</p>
+            <div class="skills-list">
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">Memory Allocation</span>
+                <span class="skill-tag">Shell</span>
+                <span class="skill-tag">Operating System</span>
+            </div>
+        </div>
+
+        <div class="project-item">
             <h3>Prep AI</h3>
             <p>Study helper website for exam preparation and schedule management. Features: schedule building, flash card generator, and quiz generation.</p>
             <div class="skills-list">
@@ -181,7 +223,7 @@
                 <span class="skill-tag">Node.js</span>
             </div>
         </div>
-
+        
         <div class="project-item">
             <h3>P's Market</h3>
             <p>P's Market is a website that will enable you to see and analyze stocks of hundreds and possibly thousands of stock markets and exchanges.P's Market has a protected login feature made possible by using JWT. We are using Nodejs as the backend and MongoDB for the database server, where all your information is kept encrypted and safe.</p>
@@ -192,18 +234,8 @@
                 <span class="skill-tag">Node.js</span>
             </div>
         </div>
-
-        <div class="project-item">
-            <h3>Blog Website</h3>
-            <p>Full stack blog with authentication and CRUD operations for posts. Built with MERN stack.</p>
-            <div class="skills-list">
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Express.js</span>
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">Node.js</span>
-            </div>
-        </div>
     </section>
+
 
     <section id="github-projects">
         <h2>📂 Latest GitHub Projects</h2>
@@ -238,6 +270,85 @@
         <p>Made with ❤️ by Prasant Koirala</p>
     </footer>
 
+    <!-- Particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Configure particles -->
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#64ffda",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+    <!-- Your existing GitHub fetch script -->
     <script>
         async function fetchGitHubProjects() {
             try {
